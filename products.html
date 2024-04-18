@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav id="navtop">
+            <a href="index.html"><img id="logo" src="Inkspire Logo.png" alt="Home"></a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <p id="inkspire-nav">Inkspire</p>
+            <a href="cart.html"><img id="cart-logo" src="cart-image.png" alt="Cart"></a>
+            
+        </nav>
+    </header>
+
+    <h1 class="main-header">Products</h1>
+
+    <div class="product1">
+        <h2>Fountain Pen</h2>
+        <img class="pen-img"src="https://scriveiner.com/cdn/shop/files/1M_6.jpg?v=1699034893&width=2048" alt="Fountain Pen">
+        <p>Our classic fountain pen crafted for a smooth writing experience.</p>
+        <p>$100.95</p>
+        <button onclick="addToCart('Fountain Pen', 100.95)">Add to Cart</button>
+    </div>
+
+    <div class="product2">
+        <h2>Ballpoint Pen</h2>
+        <img class="pen-img" src="https://i5.walmartimages.com/seo/Luxury-Rosewood-Ballpoint-Pen-Writing-Set-Elegant-Fancy-Nice-Gift-Signature-Executive-Business-Office-Supplies-Boxed-Extra-Refills_0550f1f6-df96-490f-ae9e-2d7979fa07d0.46c2042d46d0d036fdcacb9ab68dcbd3.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Ballpoint Pen">
+        <p>Modern ballpoint pen designed for everyday use.</p>
+        <p>$89.95</p>
+        <button onclick="addToCart('Ballpoint Pen', 89.95)">Add to Cart</button>
+    </div>
+
+    <div class="product3">
+        <h2>Gel Pen</h2>
+        <img class="pen-img" src="https://m.media-amazon.com/images/I/61EjOOFuqDL._AC_UF894,1000_QL80_.jpg" alt="Gel Pen">
+        <p>Premium gel pen with vibrant ink for expressive writing.</p>
+        <p>$59.65</p>
+        <button onclick="addToCart('Gel Pen', 59.65)">Add to Cart</button>
+    </div>
+
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button onclick="redirectToCart()" style="padding: 10px;">Checkout</button>
+    </div>
+
+    <script>
+        const cartItemsElement = document.getElementById('cart-items');
+        const cartTotalElement = document.getElementById('cart-total');
+        let cart = [];
+
+        // Function to add item to cart
+        function addToCart(productName, productPrice) {
+            cart.push({ name: productName, price: parseFloat(productPrice) });
+            renderCart();
+        }
+
+        // Function to render cart
+        function renderCart() {
+            cartItemsElement.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartItemsElement.appendChild(listItem);
+                total += item.price;
+            });
+            cartTotalElement.textContent = total.toFixed(2);
+        }
+
+        // Function to redirect to cart.html
+        function redirectToCart() {
+            // Redirect to cart.html page
+            window.location.href = 'cart.html';
+        }
+    </script>
+    <footer>
+
+        <p>Inkspire &#169;2024</p>
+
+    </footer>
+</body>
+
+</html>

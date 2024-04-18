@@ -1,0 +1,128 @@
+* {
+    font-family: Tangerine;
+    font-size: 24px;
+    color: white;
+}
+
+p {
+    text-align: center;
+    color: white;
+}
+
+body {
+    background-color: #66999B;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #F0803C;
+}
+
+a:hover {
+    color: #66999B;
+}
+
+header {
+    background-color: #171219;
+    width: auto;
+    
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px;
+    background-color: #171219;
+}
+
+
+
+#inkspire-nav {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 15px;
+    color:#F0803C;
+}
+
+.main-header {
+    text-align: center;
+    color:#F0803C;
+    font-size: 50px;
+}
+
+hr {
+    border: solid #F0803C 1px;
+    width: 100px;
+}
+
+#page-line {
+    position: relative;
+    top: -25px;
+}
+
+#logo {
+    max-width: 80px;
+    max-height: 50px;
+    position: relative;
+    bottom: -25px;
+}
+
+#cart-logo {
+    max-width: 80px;
+    max-height: 50px;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+}
+form, h2 {
+    text-align: center;
+}
+
+
+button {
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  
+#about-goals {
+    text-align: center;
+    max-width: 80%;
+    position: relative;
+    right: auto;
+    left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    bottom: 20px;
+}
+
+#goals-list {
+    display: inline-block;
+    
+}
+
+.pen-img {
+    height: 250px;
+    width: 250px;
+}
+
+input, select, textarea{
+    color: #000000;
+}
+
+footer {
+    text-align: center;
+    background-color: #171219;
+    padding: 10px;
+    margin-top: 10px;
+}
